@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snow_mountain/pages/navpages/main_page.dart';
 import 'package:snow_mountain/pages/welcome_page.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class Myapp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WelcomePage(),
+      home: MainPage(),
     );
   }
 }
