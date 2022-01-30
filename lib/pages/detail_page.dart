@@ -166,14 +166,15 @@ class _DetailPageState extends State<DetailPage> {
                       }),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 25,
                     ),
                     AppLargeText(
                       text: "Description",
                       color: Colors.black.withOpacity(0.8),
+                      size: 20,
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 5,
                     ),
                     AppText(
                       text:
