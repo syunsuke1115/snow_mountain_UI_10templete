@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snow_mountain/pages/navpages/home_page.dart';
+import 'package:snow_mountain/pages/home_page.dart';
 import 'package:snow_mountain/pages/navpages/bar_item_page.dart';
 import 'package:snow_mountain/pages/navpages/my_page.dart';
 import 'package:snow_mountain/pages/navpages/search_page.dart';

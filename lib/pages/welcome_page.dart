@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:snow_mountain/misc/colors.dart';
 import 'package:snow_mountain/widgets/app_large_text.dart';
@@ -18,11 +17,12 @@ class _WelcomePageState extends State<WelcomePage> {
     "welcome-two.png",
     "welcome-three.png",
   ];
-  List texts =[
+  List texts = [
     "Mountain hikes give you an incredible sense of freedom along with endurance tests",
     "Mountain hikes give you an incredible sense of freedom along with dynamic Natures",
     "Mountain hikes give you an incredible sense of freedom along with beautiful images",
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,25 +64,34 @@ class _WelcomePageState extends State<WelcomePage> {
                             size: 14,
                           ),
                         ),
-                        SizedBox(height: 40,),
-                        ResponsiveButton(width: 120,),
+                        SizedBox(
+                          height: 40,
+                        ),
+                        GestureDetector(
+                            onTap: () {
+
+                            },
+                            child: Container(
+                                width: 200,
+                                child: ResponsiveButton(
+                                  width: 120,
+                                ))),
                       ],
                     ),
                     //ページスクロールバー
                     Column(
-                      children:
-                        List.generate(3, (indexDots) {
-                          return Container(
-                            margin: const EdgeInsets.only(bottom: 2),
-                            width: 8,
-                            height: index == indexDots?25:8,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: index == indexDots?AppColors.mainColor:AppColors.mainColor.withOpacity(0.3)
-                            ),
-                          );
-                        })
-                    )
+                        children: List.generate(3, (indexDots) {
+                      return Container(
+                        margin: const EdgeInsets.only(bottom: 2),
+                        width: 8,
+                        height: index == indexDots ? 25 : 8,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: index == indexDots
+                                ? AppColors.mainColor
+                                : AppColors.mainColor.withOpacity(0.3)),
+                      );
+                    }))
                   ],
                 ),
               ),
