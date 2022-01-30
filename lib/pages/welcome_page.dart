@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snow_mountain/misc/colors.dart';
+import 'package:snow_mountain/pages/navpages/main_page.dart';
 import 'package:snow_mountain/widgets/app_large_text.dart';
 import 'package:snow_mountain/widgets/app_text.dart';
 import 'package:snow_mountain/widgets/responsicve_button.dart';
@@ -69,10 +70,11 @@ class _WelcomePageState extends State<WelcomePage> {
                         ),
                         GestureDetector(
                             onTap: () {
-
+                              Navigator.push(
+                                  context, MaterialPageRoute(builder: (context) => MainPage()));
                             },
                             child: Container(
-                                width: 200,
+                                width: 120,
                                 child: ResponsiveButton(
                                   width: 120,
                                 ))),

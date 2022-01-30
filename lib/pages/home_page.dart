@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:snow_mountain/misc/colors.dart';
+import 'package:snow_mountain/pages/detail_page.dart';
 import 'package:snow_mountain/widgets/app_large_text.dart';
 import 'package:snow_mountain/widgets/app_text.dart';
 
@@ -98,18 +99,22 @@ class _HomepageState extends State<Homepage> with TickerProviderStateMixin {
                     itemCount: 3,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        margin: const EdgeInsets.only(right: 15, top: 10),
-                        width: 200,
-                        height: 300,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "img/mountain.jpeg",
-                              ),
-                              fit: BoxFit.cover),
+                      return GestureDetector(
+                        onTap: (){Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => DetailPage()));},
+                        child: Container(
+                          margin: const EdgeInsets.only(right: 15, top: 10),
+                          width: 200,
+                          height: 300,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white,
+                            image: DecorationImage(
+                                image: AssetImage(
+                                  "img/mountain.jpeg",
+                                ),
+                                fit: BoxFit.cover),
+                          ),
                         ),
                       );
                     }),
